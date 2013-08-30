@@ -7,5 +7,20 @@ Main/Sources/Zuehlke.Camp2013.NoSQL/Zuehlke.Camp2013.NoSQL.WebCrawler/obj/*
 
 Main/Sources/Zuehlke.Camp2013.NoSQL/Zuehlke.Camp2013.NoSQL.DAL/bin/*
 Main/Sources/Zuehlke.Camp2013.NoSQL/Zuehlke.Camp2013.NoSQL.Web/bin/*
+Main/Sources/Zuehlke.Camp2013.NoSQL/Zuehlke.Camp2013.NoSQL.WebCrawler/bin/*
+
+
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\obj\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web\obj\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\obj\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler.Test\bin\*
+Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler.Test\obj\*
 
 *.pdb

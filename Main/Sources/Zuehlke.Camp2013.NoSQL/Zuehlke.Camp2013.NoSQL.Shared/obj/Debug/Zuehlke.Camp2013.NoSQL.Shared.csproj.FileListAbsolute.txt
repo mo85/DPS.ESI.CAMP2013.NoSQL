@@ -4,6 +4,5 @@ C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Cam
 C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
 C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
 C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.csprojResolveAssemblyReference.cache
 C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
 C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
