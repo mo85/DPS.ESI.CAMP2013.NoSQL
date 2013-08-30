@@ -1,0 +1,43 @@
+﻿@model Zuehlke.Camp2013.NoSQL.Web.ViewModels.SearchViewModel
+
+@{
+    ViewBag.Title = "Search Results";
+}
+
+<div id="body">
+    <section class="content-wrapper main-content clear-fix">
+
+        @Html.Partial("_SearchForm", Model.SearchParameter)
+        
+        <div id="paged-search-results">
+            @Html.Partial("_SearchResults")
+        </div>
+
+        <div id="pagination" style="margin-top: 15px;">
+        </div>
+
+        <script type="text/javascript">
+            $(function () {
+                // register pagination
+                $("#pagination").pagination({
+                    items: "@Model.PagedSearchResult.TotalRecords",
+                    itemsOnPage: "@Model.SearchParameter.PageSize",
+                    cssStyle: 'light-theme',
+                    onPageClick: function (pageNumber, event) {
+                        updateSearchResults(pageNumber);
+                    }
+                });
+            });
+
+            function updateSearchResults(pageNumber) {
+                var query = $("#SearchQuery").val();
+                var url = "@Url.Action("AjaxSearch", "Home", new { })";
+                url += "?query=" + query;
+                url += "&page=" + pageNumber;
+                $("#paged-search-results").load(url);
+            }
+        </script>
+
+    </section>
+</div>
+

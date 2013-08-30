@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/SearchResults.css")
+    @Styles.Render("~/Content/simplePagination.css")
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/jquery.simplePagination.js")
+</head>
+<body>
+    <header>
+	    <div class="float-left"><img src="~/Images/Logo.png" /></div>
+    </header>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

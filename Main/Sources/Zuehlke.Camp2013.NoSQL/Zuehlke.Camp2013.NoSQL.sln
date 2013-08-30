@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.Web", "Zuehlke.Camp2013.NoSQL.Web\Zuehlke.Camp2013.NoSQL.Web.csproj", "{907C8068-9CF9-4BB3-8F6B-E5CA5D00887B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.WebCrawler", "Zuehlke.Camp2013.NoSQL.WebCrawler\Zuehlke.Camp2013.NoSQL.WebCrawler.csproj", "{92FE2B09-7BBE-4430-BF76-472242962608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.Shared", "Zuehlke.Camp2013.NoSQL.Shared\Zuehlke.Camp2013.NoSQL.Shared.csproj", "{5024F4EA-2FFE-41FB-BA3E-3717787ED995}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AC425D99-4D23-485C-81FF-FEA62B1185E2}"
+	ProjectSection(SolutionItems) = preProject
+		TestSettings.testsettings = TestSettings.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{59F95CBB-BEDD-4079-B93E-73FB1D36F15E}"
+	ProjectSection(SolutionItems) = preProject
+		Lib\Abot.dll = Lib\Abot.dll
+		Lib\Abot.pdb = Lib\Abot.pdb
+		Lib\AutoMapper.dll = Lib\AutoMapper.dll
+		Lib\CsQuery.dll = Lib\CsQuery.dll
+		Lib\HtmlAgilityPack.dll = Lib\HtmlAgilityPack.dll
+		Lib\log4net.dll = Lib\log4net.dll
+		Lib\README.txt = Lib\README.txt
+		Lib\Robots.dll = Lib\Robots.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.Web.Test", "Zuehlke.Camp2013.NoSQL.Web.Test\Zuehlke.Camp2013.NoSQL.Web.Test.csproj", "{879C073B-912A-4DFC-9AB8-4A9A0C815DD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.WebCrawler.Test", "Zuehlke.Camp2013.NoSQL.WebCrawler.Test\Zuehlke.Camp2013.NoSQL.WebCrawler.Test.csproj", "{F7C712E1-804F-40FD-AFE6-E69AD874CFC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.DAL", "Zuehlke.Camp2013.NoSQL.DAL\Zuehlke.Camp2013.NoSQL.DAL.csproj", "{334761C5-B320-480D-8AD1-216BFD83616B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://lehmamic.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Zuehlke.Camp2013.NoSQL.Web\\Zuehlke.Camp2013.NoSQL.Web.csproj
+		SccProjectName1 = Zuehlke.Camp2013.NoSQL.Web
+		SccLocalPath1 = Zuehlke.Camp2013.NoSQL.Web
+		SccProjectUniqueName2 = Zuehlke.Camp2013.NoSQL.WebCrawler\\Zuehlke.Camp2013.NoSQL.WebCrawler.csproj
+		SccProjectName2 = Zuehlke.Camp2013.NoSQL.WebCrawler
+		SccLocalPath2 = Zuehlke.Camp2013.NoSQL.WebCrawler
+		SccProjectUniqueName3 = Zuehlke.Camp2013.NoSQL.Shared\\Zuehlke.Camp2013.NoSQL.Shared.csproj
+		SccProjectName3 = Zuehlke.Camp2013.NoSQL.Shared
+		SccLocalPath3 = Zuehlke.Camp2013.NoSQL.Shared
+		SccProjectUniqueName4 = Zuehlke.Camp2013.NoSQL.Web.Test\\Zuehlke.Camp2013.NoSQL.Web.Test.csproj
+		SccProjectName4 = Zuehlke.Camp2013.NoSQL.Web.Test
+		SccLocalPath4 = Zuehlke.Camp2013.NoSQL.Web.Test
+		SccProjectUniqueName5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test\\Zuehlke.Camp2013.NoSQL.WebCrawler.Test.csproj
+		SccProjectName5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test
+		SccLocalPath5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test
+		SccProjectUniqueName6 = Zuehlke.Camp2013.NoSQL.DAL\\Zuehlke.Camp2013.NoSQL.DAL.csproj
+		SccProjectName6 = Zuehlke.Camp2013.NoSQL.DAL
+		SccLocalPath6 = Zuehlke.Camp2013.NoSQL.DAL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{907C8068-9CF9-4BB3-8F6B-E5CA5D00887B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907C8068-9CF9-4BB3-8F6B-E5CA5D00887B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907C8068-9CF9-4BB3-8F6B-E5CA5D00887B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907C8068-9CF9-4BB3-8F6B-E5CA5D00887B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92FE2B09-7BBE-4430-BF76-472242962608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92FE2B09-7BBE-4430-BF76-472242962608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92FE2B09-7BBE-4430-BF76-472242962608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92FE2B09-7BBE-4430-BF76-472242962608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5024F4EA-2FFE-41FB-BA3E-3717787ED995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5024F4EA-2FFE-41FB-BA3E-3717787ED995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5024F4EA-2FFE-41FB-BA3E-3717787ED995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5024F4EA-2FFE-41FB-BA3E-3717787ED995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{879C073B-912A-4DFC-9AB8-4A9A0C815DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{879C073B-912A-4DFC-9AB8-4A9A0C815DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{879C073B-912A-4DFC-9AB8-4A9A0C815DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{879C073B-912A-4DFC-9AB8-4A9A0C815DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7C712E1-804F-40FD-AFE6-E69AD874CFC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7C712E1-804F-40FD-AFE6-E69AD874CFC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7C712E1-804F-40FD-AFE6-E69AD874CFC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7C712E1-804F-40FD-AFE6-E69AD874CFC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{334761C5-B320-480D-8AD1-216BFD83616B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{334761C5-B320-480D-8AD1-216BFD83616B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{334761C5-B320-480D-8AD1-216BFD83616B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{334761C5-B320-480D-8AD1-216BFD83616B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59F95CBB-BEDD-4079-B93E-73FB1D36F15E} = {AC425D99-4D23-485C-81FF-FEA62B1185E2}
+	EndGlobalSection
+EndGlobal

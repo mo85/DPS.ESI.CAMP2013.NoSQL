@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.ApiClient">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crawler\ApiClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.WebPageFactory">
+    <Position X="7.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAgAAAAAAAAEAAAAAAAAAAAAAQAAAAAACAAA=</HashCode>
+      <FileName>Crawler\WebPageFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.Processors.DescriptionExtractor">
+    <Position X="9.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Crawler\Processors\DescriptionExtractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.Processors.HeadingExtractor">
+    <Position X="11.75" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Crawler\Processors\HeadingExtractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.Processors.LinkExtractor">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Crawler\Processors\LinkExtractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.WebCrawler.Crawler.Processors.TitleExtractor">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Crawler\Processors\TitleExtractor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

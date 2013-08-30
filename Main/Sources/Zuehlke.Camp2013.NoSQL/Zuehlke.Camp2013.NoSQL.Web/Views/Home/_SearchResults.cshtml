@@ -1,0 +1,28 @@
+﻿@model Zuehlke.Camp2013.NoSQL.Web.ViewModels.SearchViewModel
+
+<h2>Search Results</h2>
+
+<table>
+    <tbody>
+        @foreach (var page in Model.PagedSearchResult.SearchResults)
+        {
+            <tr>
+                <td>
+                    <div>
+                        <div>
+                            <a href="@page.Url">@page.Title</a>
+                        </div>
+                        <div class="search-result-url">
+                            @page.Url
+                        </div>
+                    </div>
+
+                    <div class="search-result-description">
+                        @page.Description
+                    </div>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

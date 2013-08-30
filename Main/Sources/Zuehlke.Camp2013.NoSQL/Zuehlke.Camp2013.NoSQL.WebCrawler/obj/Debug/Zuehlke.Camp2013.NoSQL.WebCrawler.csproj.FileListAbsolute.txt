@@ -1,0 +1,17 @@
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe.config
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.pdb
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.csprojResolveAssemblyReference.cache
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.pdb
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Abot.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\AutoMapper.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\CsQuery.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\HtmlAgilityPack.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\log4net.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Robots.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Abot.pdb
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Newtonsoft.Json.dll
+C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Newtonsoft.Json.xml

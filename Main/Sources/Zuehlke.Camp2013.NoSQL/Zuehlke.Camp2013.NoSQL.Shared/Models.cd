@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Zuehlke.Camp2013.NoSQL.Shared.Models.PagedSearchResult">
+    <Position X="4.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PagedSearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.Shared.Models.PageHeading">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Models\PageHeading.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.Shared.Models.SearchParameter">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAEAAAABA=</HashCode>
+      <FileName>Models\SearchParameter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.Shared.Models.SearchResult">
+    <Position X="2.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAACAAAABAAAAA=</HashCode>
+      <FileName>Models\SearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zuehlke.Camp2013.NoSQL.Shared.Models.WebPage">
+    <Position X="10.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAgAgBEAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\WebPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Zuehlke.Camp2013.NoSQL.Shared.Models.HeadingLevel">
+    <Position X="6.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAEAAAAAgAAgAAAAQAAQAAA=</HashCode>
+      <FileName>Models\HeadingLevel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
