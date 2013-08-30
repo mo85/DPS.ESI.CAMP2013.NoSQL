@@ -11,16 +11,3 @@ C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Cam
 C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.dll
 C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.pdb
 C:\Data\TFS\Zühlke\DPS_ESI_Camp\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.xml
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\Zuehlke.Camp2013.NoSQL.DAL.dll.config
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\Zuehlke.Camp2013.NoSQL.DAL.dll
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\Zuehlke.Camp2013.NoSQL.DAL.pdb
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\EntityFramework.dll
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.dll
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\EntityFramework.xml
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.pdb
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\bin\Debug\HtmlAgilityPack.xml
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\obj\Debug\Zuehlke.Camp2013.NoSQL.DAL.csprojResolveAssemblyReference.cache
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\obj\Debug\Zuehlke.Camp2013.NoSQL.DAL.dll
-C:\Users\mod\Documents\GitHub\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.DAL\obj\Debug\Zuehlke.Camp2013.NoSQL.DAL.pdb
