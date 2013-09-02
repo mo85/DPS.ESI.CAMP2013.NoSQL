@@ -1,6 +1,4 @@
-﻿using System;
-using System.Web.Http;
-using Zuehlke.Camp2013.NoSQL.DAL.Entities;
+﻿using System.Web.Http;
 using Zuehlke.Camp2013.NoSQL.DAL.Services;
 using WebPage = Zuehlke.Camp2013.NoSQL.Shared.Models.WebPage;
 

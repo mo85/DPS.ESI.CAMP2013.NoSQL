@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Zühlke Search - Admin Interface";
+}
+
+<h2>This Page lets you Admin the Search Index</h2>
+
+@using (Html.BeginForm("RebuildIndex", "Admin", FormMethod.Post))
+{
+
+    <input type="submit" value="Rebuild" name="Rebuild"/>    
+}

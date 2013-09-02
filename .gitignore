@@ -24,3 +24,5 @@ Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler.Test\bin\*
 Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler.Test\obj\*
 
 *.pdb
+*\bin\*.dll
+

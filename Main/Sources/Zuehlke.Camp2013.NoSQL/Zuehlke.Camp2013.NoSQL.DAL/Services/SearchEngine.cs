@@ -40,39 +40,71 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
 
         public void RebuildIndex()
         {
-            foreach (WebPageEntity page in this.context.WebPages)
+            this.context.Configuration.AutoDetectChangesEnabled = false;
+            DeleteExistingIndexEntries();
+
+            foreach (WebPageEntity page in this.context.WebPages.ToList())
             {
-                this.RebuildIndex(page);
+                var newIndexEntities = this.CreateSearchIndexEntryEntities(page);
+                SaveIndexEntries(newIndexEntities);
+                this.context.SaveChanges();
+            }
+            this.context.Configuration.AutoDetectChangesEnabled = true;
+        }
+
+        private void SaveIndexEntries(IEnumerable<SearchIndexEntryEntity> newIndexEntries)
+        {
+            foreach (var entry in newIndexEntries)
+            {
+                this.context.SearchIndexEntries.Add(entry);
+            }
+        }
+
+        private void DeleteExistingIndexEntries()
+        {
+            var existingSearchIndexEntries = this.context.SearchIndexEntries.ToList();
+
+            DeleteIndexEntry(existingSearchIndexEntries);
+
+            this.context.SaveChanges();
+        }
+
+        private void DeleteIndexEntry(IEnumerable<SearchIndexEntryEntity> existingSearchIndexEntries)
+        {
+            foreach (var indexEntry in existingSearchIndexEntries)
+            {
+                this.context.SearchIndexEntries.Remove(indexEntry);
             }
         }
 
         public void RebuildIndex(WebPageEntity page)
         {
             IEnumerable<SearchIndexEntryEntity> indexEntries = this.context.SearchIndexEntries.Where(i => i.WebPage.Id == page.Id);
-            foreach (SearchIndexEntryEntity entry in indexEntries)
-            {
-                this.context.SearchIndexEntries.Remove(entry);
-            }
+            DeleteIndexEntry(indexEntries);
 
+            var newIndexEntries = this.CreateSearchIndexEntryEntities(page);
+
+            SaveIndexEntries(newIndexEntries);
+
+            this.context.SaveChanges();
+        }
+
+        private IEnumerable<SearchIndexEntryEntity> CreateSearchIndexEntryEntities(WebPageEntity page)
+        {
             var document = new HtmlDocument();
             document.LoadHtml(page.Content);
             var newIndexEntries = document.DocumentNode.SelectNodes("//text()")
-                .SelectMany(n => this.ParseWords(n).Select(w => Tuple.Create(w, this.CalculateElementBasedRangking(n))))
-                .GroupBy(w => w.Item1)
-                .Select(g => new SearchIndexEntryEntity
-                {
-                    Id = Guid.NewGuid(),
-                    Word = g.Key,
-                    Rangking = g.Sum(w => w.Item2),
-                    WebPage = page
-                }).ToArray();
-
-            foreach (var entry in newIndexEntries)
-            {
-                this.context.SearchIndexEntries.Add(entry);
-            }
-
-            this.context.SaveChanges();
+                                          .SelectMany(n => this.ParseWords(n)
+                                                  .Select(w => Tuple.Create(w, this.CalculateElementBasedRangking(n))))
+                                                  .GroupBy(w => w.Item1)
+                                          .Select(g => new SearchIndexEntryEntity
+                                              {
+                                                  Id = Guid.NewGuid(),
+                                                  Word = g.Key,
+                                                  Rangking = g.Sum(w => w.Item2),
+                                                  WebPage = page
+                                              });
+            return newIndexEntries;
         }
 
         public PagedSearchResult Search(SearchParameter parameter)
