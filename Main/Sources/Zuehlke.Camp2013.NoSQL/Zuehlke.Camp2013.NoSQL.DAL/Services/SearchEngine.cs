@@ -35,7 +35,8 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
             this.context.WebPages.Add(pageEntity);
             this.context.SaveChanges();
 
-            this.RebuildIndex(pageEntity);
+            // excluded for performance reasons...
+            // this.RebuildIndex(pageEntity);
         }
 
         public void RebuildIndex()
