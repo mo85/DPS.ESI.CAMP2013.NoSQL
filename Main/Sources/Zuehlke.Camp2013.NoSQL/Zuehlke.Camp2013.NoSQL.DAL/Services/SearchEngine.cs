@@ -5,104 +5,66 @@ using System.Text.RegularExpressions;
 using HtmlAgilityPack;
 using Zuehlke.Camp2013.NoSQL.DAL.Entities;
 using Zuehlke.Camp2013.NoSQL.Shared.Models;
+using WebPage = Zuehlke.Camp2013.NoSQL.DAL.Entities.WebPage;
 
 namespace Zuehlke.Camp2013.NoSQL.DAL.Services
 {
     public class SearchEngine
     {
-        private readonly SearchEngineContext context;
-        private readonly Regex regex = new Regex("(?<Word>[a-zA-Z0-9]{2,})");
+        private readonly MongoDbDao _mongoDbDao;
+        private readonly Regex _regex = new Regex("(?<Word>[a-zA-Z0-9]{2,})");
 
-        public SearchEngine(SearchEngineContext context)
+        public SearchEngine(MongoDbDao mongoDbDao)
         {
-            if (context == null)
+            if (mongoDbDao == null)
             {
-                throw new ArgumentNullException("context");
+                throw new ArgumentNullException("mongoDbDao");
             }
-
-            this.context = context;
+            _mongoDbDao = mongoDbDao;
         }
 
-        public void InsertPage(WebPage webPage)
+        public void InsertPage(Shared.Models.WebPage webPage)
         {
-            WebPageEntity pageEntity = this.context.WebPages.Create();
-            pageEntity.Id = Guid.NewGuid();
-            pageEntity.Content = webPage.Content;
-            pageEntity.Url = webPage.Url;
-            pageEntity.Title = webPage.Title;
-            pageEntity.Description = webPage.Description;
-
-            this.context.WebPages.Add(pageEntity);
-            this.context.SaveChanges();
-
-            this.RebuildIndex(pageEntity);
-        }
-
-        public void RebuildIndex()
-        {
-            this.context.Configuration.AutoDetectChangesEnabled = false;
-            DeleteExistingIndexEntries();
-
-            foreach (WebPageEntity page in this.context.WebPages.ToList())
+            var page = new WebPage
             {
-                var newIndexEntities = this.CreateSearchIndexEntryEntities(page);
-                SaveIndexEntries(newIndexEntities);
-                this.context.SaveChanges();
-            }
-            this.context.Configuration.AutoDetectChangesEnabled = true;
-        }
-
-        private void SaveIndexEntries(IEnumerable<SearchIndexEntryEntity> newIndexEntries)
-        {
-            foreach (var entry in newIndexEntries)
+                //Content = webPage.Content,
+                Url = webPage.Url,
+                Title = webPage.Title,
+                Description = webPage.Description
+            };
+            var insertPage = _mongoDbDao.InsertPage(page);
+            if (insertPage)
             {
-                this.context.SearchIndexEntries.Add(entry);
+                RebuildIndex(page, webPage.Content);
             }
         }
 
-        private void DeleteExistingIndexEntries()
+        //public void RebuildIndex()
+        //{
+        //    foreach (var page in _mongoDbDao.GetAllWebPages())
+        //    {
+        //        RebuildIndex(page);
+        //    }
+        //}
+
+        public void RebuildIndex(WebPage page, string webPageContent)
         {
-            var existingSearchIndexEntries = this.context.SearchIndexEntries.ToList();
-
-            DeleteIndexEntry(existingSearchIndexEntries);
-
-            this.context.SaveChanges();
+            page.SearchIndexEntries = CreateSearchIndexEntryEntities(webPageContent);
+            _mongoDbDao.UpdateWebPage(page);
         }
 
-        private void DeleteIndexEntry(IEnumerable<SearchIndexEntryEntity> existingSearchIndexEntries)
-        {
-            foreach (var indexEntry in existingSearchIndexEntries)
-            {
-                this.context.SearchIndexEntries.Remove(indexEntry);
-            }
-        }
-
-        public void RebuildIndex(WebPageEntity page)
-        {
-            IEnumerable<SearchIndexEntryEntity> indexEntries = this.context.SearchIndexEntries.Where(i => i.WebPage.Id == page.Id);
-            DeleteIndexEntry(indexEntries);
-
-            var newIndexEntries = this.CreateSearchIndexEntryEntities(page);
-
-            SaveIndexEntries(newIndexEntries);
-
-            this.context.SaveChanges();
-        }
-
-        private IEnumerable<SearchIndexEntryEntity> CreateSearchIndexEntryEntities(WebPageEntity page)
+        private IEnumerable<SearchIndexEntry> CreateSearchIndexEntryEntities(string webPageContent)
         {
             var document = new HtmlDocument();
-            document.LoadHtml(page.Content);
+            document.LoadHtml(webPageContent);
             var newIndexEntries = document.DocumentNode.SelectNodes("//text()")
-                                          .SelectMany(n => this.ParseWords(n)
-                                                  .Select(w => Tuple.Create(w, this.CalculateElementBasedRangking(n))))
+                                          .SelectMany(n =>ParseWords(n)
+                                                  .Select(w => Tuple.Create(w, CalculateElementBasedRangking(n))))
                                                   .GroupBy(w => w.Item1)
-                                          .Select(g => new SearchIndexEntryEntity
+                                          .Select(g => new SearchIndexEntry
                                               {
-                                                  Id = Guid.NewGuid(),
                                                   Word = g.Key,
-                                                  Rangking = g.Sum(w => w.Item2),
-                                                  WebPage = page
+                                                  Ranking = g.Sum(w => w.Item2)
                                               });
             return newIndexEntries;
         }
@@ -111,34 +73,36 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
         {
             var searchQueryElements = (parameter.Query ?? string.Empty).ToUpperInvariant().Split(' ');
 
-            var query = this.context.SearchIndexEntries.Where(i => searchQueryElements.Contains(i.Word))
-                .GroupBy(i => i.WebPage.Url);
+            var webPages = _mongoDbDao.FindWebPagesByKeyWords(searchQueryElements);
 
-            var result = query.OrderByDescending(i => i.Sum(x => x.Rangking))
+            var result = webPages.OrderByDescending(
+                wp => wp.SearchIndexEntries.Where(sie => searchQueryElements.Contains(sie.Word)).Sum(sie => sie.Ranking))
                 .Skip(parameter.Page * parameter.PageSize)
                 .Take(parameter.PageSize)
-                .Select(g => new SearchResult
+                .Select(wp => new SearchResult
                 {
-                    Url = g.Key,
-                    Title = g.Select(i => i.WebPage.Title).FirstOrDefault(),
-                    Description = g.Select(i => i.WebPage.Description).FirstOrDefault(),
-                    Ranking = g.Sum(i => i.Rangking)
+                    Url = wp.Url,
+                    Title = wp.Title,
+                    Description = wp.Description,
+                    Ranking = wp.SearchIndexEntries.Where(sie => searchQueryElements.Contains(sie.Word)).Sum(sie => sie.Ranking)
                 });
+
+            var resultArray = result.ToArray();
 
             return new PagedSearchResult
             {
-                TotalRecords = query.Count(),
-                SearchResults = result.ToArray(),
+                TotalRecords = webPages.Count(),
+                SearchResults = resultArray,
             };
         }
 
         private IEnumerable<string> ParseWords(HtmlNode n)
         {
-            return this.regex.Matches(n.InnerText).OfType<Match>()
+            return _regex.Matches(n.InnerText).OfType<Match>()
                 .Select(g => g.Value.ToUpperInvariant());
         }
 
-        private int CalculateElementBasedRangking(HtmlNode n)
+        private static int CalculateElementBasedRangking(HtmlNode n)
         {
             switch (n.ParentNode.Name.ToUpperInvariant())
             {

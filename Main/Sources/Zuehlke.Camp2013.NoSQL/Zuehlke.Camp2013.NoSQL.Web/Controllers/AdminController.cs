@@ -16,10 +16,9 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
         [HttpPost]
         public ActionResult RebuildIndex()
         {
-            using (var context = new SearchEngineContext())
+            using (var mongoDbDao = new MongoDbDao())
             {
-                var engine = new SearchEngine(context);
-                engine.RebuildIndex();
+                var engine = new SearchEngine(mongoDbDao);
             }
 
             return RedirectToAction("Index");

@@ -1,0 +1,9 @@
+db.WebPages.aggregate({$project: { Url:1, SearchIndexEntries: 1}}, { $unwind: "$SearchIndexEntries" }, { $group: { _id: null, numberOfIndexes: { $sum: 1 } } } )
+
+db.WebPages.aggregate({$project: { Url:1, SearchIndexEntries: 1}}, { $unwind: "$SearchIndexEntries" }, { $group: { _id: {url:"$Url"}, numberOfIndexes: { $sum: 1 } } } )
+
+db.WebPages.aggregate({$project: { Url:1, SearchIndexEntries: 1}}, { $unwind: "$SearchIndexEntries" }, { $group: { _id: {url:"$Url"}, numberOfIndexes: { $sum: 1 } } }, { $match: { numberOfIndexes:{$gt:1000}  }  } )
+
+db.WebPages.aggregate({$project: { Url:1, SearchIndexEntries: 1}}, { $unwind: "$SearchIndexEntries" }, { $group: { _id: {url:"$Url"}, numberOfIndexes: { $sum: 1 } } }, { $match: { numberOfIndexes:{$lt:100}  }  } )
+
+

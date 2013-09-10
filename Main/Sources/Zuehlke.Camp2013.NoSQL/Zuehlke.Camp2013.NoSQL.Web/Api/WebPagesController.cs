@@ -9,9 +9,9 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Api
         // POST api/webpages
         public void Post([FromBody]WebPage webPage)
         {
-            using (var context = new SearchEngineContext())
+            using (var mongoDbDao = new MongoDbDao())
             {
-                var engine = new SearchEngine(context);
+                var engine = new SearchEngine(mongoDbDao);
                 engine.InsertPage(webPage);
             }
         }

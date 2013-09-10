@@ -29,9 +29,9 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 
         private static SearchViewModel CreateSearchViewModel(SearchParameter parameter)
         {
-            using (var context = new SearchEngineContext())
+            using (var mongoDbDao = new MongoDbDao())
             {
-                var engine = new SearchEngine(context);
+                var engine = new SearchEngine(mongoDbDao);
                 var viewModel = new SearchViewModel
                 {
                     SearchParameter = parameter,
