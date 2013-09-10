@@ -10,10 +10,10 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
 {
     public class SearchEngine
     {
-        private readonly SearchEngineContext context;
+        private readonly ISearchContext context;
         private readonly Regex regex = new Regex("(?<Word>[a-zA-Z0-9]{2,})");
 
-        public SearchEngine(SearchEngineContext context)
+        public SearchEngine(ISearchContext context)
         {
             if (context == null)
             {
@@ -25,72 +25,19 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
 
         public void InsertPage(WebPage webPage)
         {
-            WebPageEntity pageEntity = this.context.WebPages.Create();
-            pageEntity.Id = Guid.NewGuid();
-            pageEntity.Content = webPage.Content;
-            pageEntity.Url = webPage.Url;
-            pageEntity.Title = webPage.Title;
-            pageEntity.Description = webPage.Description;
+            var pageEntity = new WebPageEntity
+                {
+                    Content = webPage.Content,
+                    Url = webPage.Url,
+                    Title = webPage.Title,
+                    Description = webPage.Description,
+                    SearchIndexEntities = CreateSearchIndexEntryEntities(webPage)
+                };
 
-            this.context.WebPages.Add(pageEntity);
-            this.context.SaveChanges();
-
-            // excluded for performance reasons...
-            // this.RebuildIndex(pageEntity);
+            this.context.Add(pageEntity);
         }
 
-        public void RebuildIndex()
-        {
-            this.context.Configuration.AutoDetectChangesEnabled = false;
-            DeleteExistingIndexEntries();
-
-            foreach (WebPageEntity page in this.context.WebPages.ToList())
-            {
-                var newIndexEntities = this.CreateSearchIndexEntryEntities(page);
-                SaveIndexEntries(newIndexEntities);
-                this.context.SaveChanges();
-            }
-            this.context.Configuration.AutoDetectChangesEnabled = true;
-        }
-
-        private void SaveIndexEntries(IEnumerable<SearchIndexEntryEntity> newIndexEntries)
-        {
-            foreach (var entry in newIndexEntries)
-            {
-                this.context.SearchIndexEntries.Add(entry);
-            }
-        }
-
-        private void DeleteExistingIndexEntries()
-        {
-            var existingSearchIndexEntries = this.context.SearchIndexEntries.ToList();
-
-            DeleteIndexEntry(existingSearchIndexEntries);
-
-            this.context.SaveChanges();
-        }
-
-        private void DeleteIndexEntry(IEnumerable<SearchIndexEntryEntity> existingSearchIndexEntries)
-        {
-            foreach (var indexEntry in existingSearchIndexEntries)
-            {
-                this.context.SearchIndexEntries.Remove(indexEntry);
-            }
-        }
-
-        public void RebuildIndex(WebPageEntity page)
-        {
-            IEnumerable<SearchIndexEntryEntity> indexEntries = this.context.SearchIndexEntries.Where(i => i.WebPage.Id == page.Id);
-            DeleteIndexEntry(indexEntries);
-
-            var newIndexEntries = this.CreateSearchIndexEntryEntities(page);
-
-            SaveIndexEntries(newIndexEntries);
-
-            this.context.SaveChanges();
-        }
-
-        private IEnumerable<SearchIndexEntryEntity> CreateSearchIndexEntryEntities(WebPageEntity page)
+        private IEnumerable<SearchIndexEntryEntity> CreateSearchIndexEntryEntities(WebPage page)
         {
             var document = new HtmlDocument();
             document.LoadHtml(page.Content);
@@ -100,10 +47,8 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
                                                   .GroupBy(w => w.Item1)
                                           .Select(g => new SearchIndexEntryEntity
                                               {
-                                                  Id = Guid.NewGuid(),
                                                   Word = g.Key,
                                                   Rangking = g.Sum(w => w.Item2),
-                                                  WebPage = page
                                               });
             return newIndexEntries;
         }
@@ -112,18 +57,17 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
         {
             var searchQueryElements = (parameter.Query ?? string.Empty).ToUpperInvariant().Split(' ');
 
-            var query = this.context.SearchIndexEntries.Where(i => searchQueryElements.Contains(i.Word))
-                .GroupBy(i => i.WebPage.Url);
+            var query = FindMatchingWebPages(searchQueryElements).ToList();
 
-            var result = query.OrderByDescending(i => i.Sum(x => x.Rangking))
+            var result = query.OrderByDescending(p => FilterIndexEntities(p.SearchIndexEntities, searchQueryElements).Sum(i => i.Rangking))
                 .Skip(parameter.Page * parameter.PageSize)
                 .Take(parameter.PageSize)
-                .Select(g => new SearchResult
+                .Select(p => new SearchResult
                 {
-                    Url = g.Key,
-                    Title = g.Select(i => i.WebPage.Title).FirstOrDefault(),
-                    Description = g.Select(i => i.WebPage.Description).FirstOrDefault(),
-                    Ranking = g.Sum(i => i.Rangking)
+                    Url = p.Url,
+                    Title = p.Title,
+                    Description = p.Description,
+                    Ranking = p.SearchIndexEntities.Sum(i => i.Rangking)
                 });
 
             return new PagedSearchResult
@@ -131,6 +75,18 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
                 TotalRecords = query.Count(),
                 SearchResults = result.ToArray(),
             };
+        }
+
+        private static IEnumerable<SearchIndexEntryEntity> FilterIndexEntities(IEnumerable<SearchIndexEntryEntity> searchIndexEntities, IEnumerable<string> searchQueryElements)
+        {
+            // var query = searchIndexEntities.Where(i => searchQueryElements.Any(e => i.Word.Contains(e)));
+            var query = searchIndexEntities.Where(i => searchQueryElements.Contains(i.Word)); //Any(e => i.Word.Contains(e)));
+            return query;
+        } 
+
+        private IEnumerable<WebPageEntity> FindMatchingWebPages(IEnumerable<string> searchQueryElements)
+        {
+            return this.context.Pages.Where(p => p.SearchIndexEntities.Any(i => searchQueryElements.Contains(i.Word)));
         }
 
         private IEnumerable<string> ParseWords(HtmlNode n)

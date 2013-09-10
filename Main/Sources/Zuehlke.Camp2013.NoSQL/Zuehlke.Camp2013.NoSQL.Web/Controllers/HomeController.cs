@@ -7,6 +7,13 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ISearchContext context;
+
+        public HomeController(ISearchContext context)
+        {
+            this.context = context;
+        }
+
         public ActionResult Index()
         {
             return this.View();
@@ -21,25 +28,19 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
         [HttpGet]
         public ActionResult AjaxSearch(string query, int page)
         {
-            return this.PartialView(
-                "_SearchResults",
-                CreateSearchViewModel(
-                new SearchParameter { Page = page - 1, Query = query }));
+            return this.PartialView("_SearchResults", CreateSearchViewModel(new SearchParameter { Page = page - 1, Query = query }));
         }
 
-        private static SearchViewModel CreateSearchViewModel(SearchParameter parameter)
+        private SearchViewModel CreateSearchViewModel(SearchParameter parameter)
         {
-            using (var context = new SearchEngineContext())
-            {
-                var engine = new SearchEngine(context);
-                var viewModel = new SearchViewModel
+            var engine = new SearchEngine(context);
+            var viewModel = new SearchViewModel
                 {
                     SearchParameter = parameter,
                     PagedSearchResult = engine.Search(parameter)
                 };
 
-                return viewModel;
-            }
+            return viewModel;
         }
     }
 }

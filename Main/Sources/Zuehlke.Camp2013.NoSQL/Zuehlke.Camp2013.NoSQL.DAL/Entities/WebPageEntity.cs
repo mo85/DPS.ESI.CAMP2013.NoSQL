@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Zuehlke.Camp2013.NoSQL.DAL.Entities
 {
     public class WebPageEntity
     {
-        public virtual Guid Id { get; set; }
+        public string Url { get; set; }
 
-        public virtual string Url { get; set; }
+        public virtual ObjectId Id { get; private set; }
 
-        public virtual string Content { get; set; }
+        [BsonIgnore]
+        public string Content { get; set; }
 
-        public virtual string Title { get; set; }
+        public string Title { get; set; }
 
-        public virtual string Description { get; set; }
+        public string Description { get; set; }
+
+        public IEnumerable<SearchIndexEntryEntity> SearchIndexEntities { get; set; }
     }
 }

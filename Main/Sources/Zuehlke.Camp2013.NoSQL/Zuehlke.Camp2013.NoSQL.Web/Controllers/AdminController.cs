@@ -1,27 +1,34 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Zuehlke.Camp2013.NoSQL.DAL.Services;
+using Zuehlke.Camp2013.NoSQL.Web.Models;
 
 namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 {
     public class AdminController : Controller
     {
-        //
-        // GET: /Admin/
+        private readonly ISearchContext context;
+
+        public AdminController(ISearchContext context)
+        {
+            this.context = context;
+        }
 
         public ActionResult Index()
         {
-            return View();
+            var statsModel = new StatsModel();
+            var mongoClient = new MongoDBClient();
+            statsModel.NumberOfPages = mongoClient.Pages.Count();
+            statsModel.NumberOfIndexEntries = mongoClient.Pages.AsQueryable().Sum(p => p.SearchIndexEntities.Count());
+            return View(statsModel);
         }
 
         [HttpPost]
         public ActionResult RebuildIndex()
         {
-            using (var context = new SearchEngineContext())
-            {
-                var engine = new SearchEngine(context);
-                engine.RebuildIndex();
-            }
-
+            var engine = new SearchEngine(context);
+            //engine.RebuildIndex();
+            
             return RedirectToAction("Index");
         }
 

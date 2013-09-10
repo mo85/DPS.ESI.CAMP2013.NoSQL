@@ -31,30 +31,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zuehlke.Camp2013.NoSQL.DAL", "Zuehlke.Camp2013.NoSQL.DAL\Zuehlke.Camp2013.NoSQL.DAL.csproj", "{334761C5-B320-480D-8AD1-216BFD83616B}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://lehmamic.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Zuehlke.Camp2013.NoSQL.Web\\Zuehlke.Camp2013.NoSQL.Web.csproj
-		SccProjectName1 = Zuehlke.Camp2013.NoSQL.Web
-		SccLocalPath1 = Zuehlke.Camp2013.NoSQL.Web
-		SccProjectUniqueName2 = Zuehlke.Camp2013.NoSQL.WebCrawler\\Zuehlke.Camp2013.NoSQL.WebCrawler.csproj
-		SccProjectName2 = Zuehlke.Camp2013.NoSQL.WebCrawler
-		SccLocalPath2 = Zuehlke.Camp2013.NoSQL.WebCrawler
-		SccProjectUniqueName3 = Zuehlke.Camp2013.NoSQL.Shared\\Zuehlke.Camp2013.NoSQL.Shared.csproj
-		SccProjectName3 = Zuehlke.Camp2013.NoSQL.Shared
-		SccLocalPath3 = Zuehlke.Camp2013.NoSQL.Shared
-		SccProjectUniqueName4 = Zuehlke.Camp2013.NoSQL.Web.Test\\Zuehlke.Camp2013.NoSQL.Web.Test.csproj
-		SccProjectName4 = Zuehlke.Camp2013.NoSQL.Web.Test
-		SccLocalPath4 = Zuehlke.Camp2013.NoSQL.Web.Test
-		SccProjectUniqueName5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test\\Zuehlke.Camp2013.NoSQL.WebCrawler.Test.csproj
-		SccProjectName5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test
-		SccLocalPath5 = Zuehlke.Camp2013.NoSQL.WebCrawler.Test
-		SccProjectUniqueName6 = Zuehlke.Camp2013.NoSQL.DAL\\Zuehlke.Camp2013.NoSQL.DAL.csproj
-		SccProjectName6 = Zuehlke.Camp2013.NoSQL.DAL
-		SccLocalPath6 = Zuehlke.Camp2013.NoSQL.DAL
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

@@ -6,14 +6,23 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Api
 {
     public class WebPagesController : ApiController
     {
+        private readonly ISearchContext context;
+
+        public WebPagesController()
+        {
+            this.context = new MongoDBClient();
+        }
+
         // POST api/webpages
         public void Post([FromBody]WebPage webPage)
         {
-            using (var context = new SearchEngineContext())
-            {
-                var engine = new SearchEngine(context);
-                engine.InsertPage(webPage);
-            }
+            var engine = new SearchEngine(context);
+            engine.InsertPage(webPage);
+        }
+
+        public void Get()
+        {
+            // "Ok";
         }
     }
 }

@@ -42,13 +42,7 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
             var query = Query<WebPageEntity>.EQ(x => x.Id, page.Id);
             WebPagesCollection.Remove(query);
         }
-
-        public void Remove(SearchIndexEntryEntity indexEntry)
-        {
-            var query = Query<SearchIndexEntryEntity>.EQ(x => x.Id, indexEntry.Id);
-            IndexEntriesCollection.Remove(query);
-        }
-
+        
         private MongoCollection<WebPageEntity> WebPagesCollection
         {
             get { return database.GetCollection<WebPageEntity>("WebPages"); }

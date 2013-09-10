@@ -1,11 +1,20 @@
-﻿@{
+﻿@model Zuehlke.Camp2013.NoSQL.Web.Models.StatsModel
+
+@{
     ViewBag.Title = "Zühlke Search - Admin Interface";
 }
 
-<h2>This Page lets you Admin the Search Index</h2>
+<h2>Statistics</h2>
 
-@using (Html.BeginForm("RebuildIndex", "Admin", FormMethod.Post))
-{
-
-    <input type="submit" value="Rebuild" name="Rebuild"/>    
-}
+<table style="width: 100%;">
+    <tr>
+        <th>Number of Pages</th>
+        <th>Number of Index Entries</th>
+    </tr>
+    <tbody>
+        <tr>
+            <td>@Model.NumberOfPages</td>
+            <td>@Model.NumberOfIndexEntries</td>
+        </tr>
+    </tbody>
+</table>

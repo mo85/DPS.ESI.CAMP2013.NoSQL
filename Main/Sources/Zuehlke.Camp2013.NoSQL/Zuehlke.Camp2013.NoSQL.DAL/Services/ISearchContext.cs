@@ -16,7 +16,5 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
         void Add(WebPageEntity page);
 
         void Remove(WebPageEntity page);
-
-        void Remove(SearchIndexEntryEntity indexEntry);
     }
 }
