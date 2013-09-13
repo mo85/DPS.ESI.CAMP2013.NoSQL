@@ -5,6 +5,8 @@ using Zuehlke.Camp2013.NoSQL.Web.ViewModels;
 
 namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 {
+    using System;
+
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -21,6 +23,7 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
         [HttpGet]
         public ActionResult AjaxSearch(string query, int page)
         {
+            Console.WriteLine("Hit AjaxSearch!!");
             return this.PartialView(
                 "_SearchResults",
                 CreateSearchViewModel(

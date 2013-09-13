@@ -47,3 +47,20 @@ C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Abot.pdb
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.csprojResolveAssemblyReference.cache
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe.config
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Abot.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\AutoMapper.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\CsQuery.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\HtmlAgilityPack.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\log4net.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Newtonsoft.Json.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Robots.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Abot.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\bin\Debug\Newtonsoft.Json.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.csprojResolveAssemblyReference.cache
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.exe
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.WebCrawler\obj\Debug\Zuehlke.Camp2013.NoSQL.WebCrawler.pdb

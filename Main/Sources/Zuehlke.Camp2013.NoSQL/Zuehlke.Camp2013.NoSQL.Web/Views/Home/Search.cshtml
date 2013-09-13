@@ -32,7 +32,7 @@
             function updateSearchResults(pageNumber) {
                 var query = $("#SearchQuery").val();
                 var url = "@Url.Action("AjaxSearch", "Home", new { })";
-                url += "?query=" + query;
+                url += "?query=" + encodeURIComponent(query);
                 url += "&page=" + pageNumber;
                 $("#paged-search-results").load(url);
             }

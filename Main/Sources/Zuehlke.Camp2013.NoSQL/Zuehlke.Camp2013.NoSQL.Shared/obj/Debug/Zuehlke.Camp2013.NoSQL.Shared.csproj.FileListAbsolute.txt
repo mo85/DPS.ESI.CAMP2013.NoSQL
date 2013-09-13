@@ -12,3 +12,7 @@ C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.csprojResolveAssemblyReference.cache
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Shared\obj\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb

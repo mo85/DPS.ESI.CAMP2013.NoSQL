@@ -3,6 +3,10 @@ using Zuehlke.Camp2013.NoSQL.DAL.Services;
 
 namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 {
+    using Zuehlke.Camp2013.NoSQL.Web.ViewModels.Admin;
+
+    using System.Linq;
+
     public class AdminController : Controller
     {
         //
@@ -10,7 +14,19 @@ namespace Zuehlke.Camp2013.NoSQL.Web.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var vm = new IndexViewModel();
+
+            using (var mongoDbDao = new MongoDbDao())
+            {
+                vm.NrPagesCrawled = mongoDbDao.GetNrPagesCrawled();
+                vm.NrPagesIndexed = mongoDbDao.GetNrPagesIndexed();
+                vm.NrDistinctWords = mongoDbDao.GetNrDistinctWords();
+                vm.NrIndexesTotal = mongoDbDao.GetNrIndexesTotal();
+                vm.PagesWithMostIndexes = mongoDbDao.FindWebPagesWithMostIndexes(5);
+                vm.PagesWithLeastIndexes = mongoDbDao.FindWebPagesWithLeastIndexes(5);
+            }
+
+            return View(vm);
         }
 
         [HttpPost]

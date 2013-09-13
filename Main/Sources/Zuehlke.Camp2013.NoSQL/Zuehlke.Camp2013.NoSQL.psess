@@ -50,7 +50,7 @@
       <LaunchMethod>Browser</LaunchMethod>
       <LaunchUrl>http://localhost:8693/</LaunchUrl>
       <SiteUrl>http://localhost:8693/</SiteUrl>
-      <LocalPath>C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web\</LocalPath>
+      <LocalPath>C:\fage\DPS&amp;amp;ESI Camp 2013\NoSQL &amp;amp; MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web\</LocalPath>
       <VRoot>
       </VRoot>
       <NetAppHost>IIS</NetAppHost>
@@ -70,7 +70,7 @@
   </Binaries>
   <Reports>
     <Report>
-      <Path>Zuehlke.Camp2013.NoSQL130910.vsp</Path>
+      <Path>Zuehlke.Camp2013.NoSQL130912.vsp</Path>
     </Report>
   </Reports>
   <Launches>

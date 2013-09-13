@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Zuehlke.Camp2013.NoSQL.DAL.Entities
 {
+    [BsonIgnoreExtraElements]
     public class WebPage
     {
         public ObjectId Id { get; set; }
@@ -15,7 +15,5 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Entities
         public string Title { get; set; }
 
         public string Description { get; set; }
-
-        public IEnumerable<SearchIndexEntry> SearchIndexEntries { get; set; }
     }
 }

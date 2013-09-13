@@ -1,0 +1,17 @@
+db.SearchWords.drop()
+var allWebPages = db.WebPages.find({ SearchIndexEntries: {$ne: null} })
+while (allWebPages.hasNext()) {
+  var wp = allWebPages.next()
+  for (var i = 0; i < wp.SearchIndexEntries.length; i++) {
+    var sie = wp.SearchIndexEntries[i]
+    if (db.SearchWords.find({ _id: sie.Word }).count() > 0) {
+      db.SearchWords.update({ _id: sie.Word }, { $addToSet: { WebPages: { WebPageId: wp._id, Ranking: sie.Ranking } } })
+    } else {
+      db.SearchWords.insert({ _id: sie.Word, WebPages: [ { WebPageId: wp._id, Ranking: sie.Ranking } ] })
+    }
+  }
+}
+
+
+db.WebPages.update({}, { $unset: {SearchIndexEntries: ""} }, { multi: true })
+db.runCommand({ compact:"WebPages" })

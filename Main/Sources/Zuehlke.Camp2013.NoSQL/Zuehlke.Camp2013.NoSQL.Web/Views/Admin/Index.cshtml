@@ -1,8 +1,38 @@
-﻿@{
+﻿@model Zuehlke.Camp2013.NoSQL.Web.ViewModels.Admin.IndexViewModel
+
+@{
     ViewBag.Title = "Zühlke Search - Admin Interface";
 }
 
 <h2>This Page lets you Admin the Search Index</h2>
+
+<h3>Information about the Search Index</h3>
+
+<div># Pages Crawled: @Model.NrPagesCrawled</div>
+
+<div># Pages Indexed: @Model.NrPagesIndexed</div>
+
+<div># Distinct Words: @Model.NrDistinctWords</div>
+
+<div># Indexes: @Model.NrIndexesTotal</div>
+
+<div>Average # Indexes per Page: @Model.AvgIndexesPerPage</div>
+
+<h5>Pages with most Indexes</h5>
+<ul>
+    @foreach (var kv in Model.PagesWithMostIndexes)
+    {
+        <li>@kv.Key:  @kv.Value</li>
+    }
+</ul>
+
+<h5>Pages with least Indexes</h5>
+<ul>
+    @foreach (var kv in Model.PagesWithLeastIndexes)
+    {
+        <li>@kv.Key:  @kv.Value</li>
+    }
+</ul>
 
 @using (Html.BeginForm("RebuildIndex", "Admin", FormMethod.Post))
 {

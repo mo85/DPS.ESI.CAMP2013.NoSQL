@@ -53,7 +53,7 @@ namespace Zuehlke.Camp2013.NoSQL.WebCrawler
         private static async void PostWebPageToServer(WebPage page)
         {
             var response = await new ApiClient().PostWebPage(page);
-            response.EnsureSuccessStatusCode();
+            //response.EnsureSuccessStatusCode();
         }
     }
 }

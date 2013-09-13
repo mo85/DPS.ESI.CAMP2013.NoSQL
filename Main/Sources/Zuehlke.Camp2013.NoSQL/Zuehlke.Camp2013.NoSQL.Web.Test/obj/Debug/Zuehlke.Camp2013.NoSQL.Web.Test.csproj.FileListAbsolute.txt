@@ -84,3 +84,35 @@ C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.Tracing.xml
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\dga\Desktop\WebCrawler\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\obj\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.dll.config
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\EntityFramework.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.DAL.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Web.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\MongoDB.Bson.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\MongoDB.Driver.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\HtmlAgilityPack.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Optimization.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Net.Http.Formatting.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.Tracing.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.WebHost.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Newtonsoft.Json.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.DAL.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Web.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\EntityFramework.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\MongoDB.Bson.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\MongoDB.Driver.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Zuehlke.Camp2013.NoSQL.Shared.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\HtmlAgilityPack.pdb
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\HtmlAgilityPack.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Net.Http.Formatting.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.Tracing.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\System.Web.Http.WebHost.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\bin\Debug\Newtonsoft.Json.xml
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\obj\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.csprojResolveAssemblyReference.cache
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\obj\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.dll
+C:\fage\DPS&ESI Camp 2013\NoSQL & MongoDB\webcrawler\DPS.ESI.CAMP2013.NoSQL\Main\Sources\Zuehlke.Camp2013.NoSQL\Zuehlke.Camp2013.NoSQL.Web.Test\obj\Debug\Zuehlke.Camp2013.NoSQL.Web.Test.pdb

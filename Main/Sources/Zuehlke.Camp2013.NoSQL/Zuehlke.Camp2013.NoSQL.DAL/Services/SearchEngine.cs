@@ -49,50 +49,58 @@ namespace Zuehlke.Camp2013.NoSQL.DAL.Services
 
         public void RebuildIndex(WebPage page, string webPageContent)
         {
-            page.SearchIndexEntries = CreateSearchIndexEntryEntities(webPageContent);
-            _mongoDbDao.UpdateWebPage(page);
+            var dict = this.CalculateWordRankings(webPageContent);
+            foreach (var kv in dict)
+            {
+                _mongoDbDao.AddWebPageToSearchIndexEntry(
+                    kv.Key, new SearchIndexRanking { Ranking = kv.Value, WebPageId = page.Id });
+            }
         }
 
-        private IEnumerable<SearchIndexEntry> CreateSearchIndexEntryEntities(string webPageContent)
+        private Dictionary<string, int> CalculateWordRankings(string webPageContent)
         {
             var document = new HtmlDocument();
             document.LoadHtml(webPageContent);
-            var newIndexEntries = document.DocumentNode.SelectNodes("//text()")
-                                          .SelectMany(n =>ParseWords(n)
-                                                  .Select(w => Tuple.Create(w, CalculateElementBasedRangking(n))))
-                                                  .GroupBy(w => w.Item1)
-                                          .Select(g => new SearchIndexEntry
-                                              {
-                                                  Word = g.Key,
-                                                  Ranking = g.Sum(w => w.Item2)
-                                              });
-            return newIndexEntries;
+            var dictionary =
+                document.DocumentNode.SelectNodes("//text()")
+                        .SelectMany(n => ParseWords(n).Select(w => Tuple.Create(w, CalculateElementBasedRangking(n))))
+                        .GroupBy(w => w.Item1)
+                        .ToDictionary(g => g.Key, g => g.Sum(w => w.Item2));
+            return dictionary;
         }
 
         public PagedSearchResult Search(SearchParameter parameter)
         {
             var searchQueryElements = (parameter.Query ?? string.Empty).ToUpperInvariant().Split(' ');
 
-            var webPages = _mongoDbDao.FindWebPagesByKeyWords(searchQueryElements);
+            var searchIndexEntries = _mongoDbDao.GetSearchIndexEntries(searchQueryElements);
 
-            var result = webPages.OrderByDescending(
-                wp => wp.SearchIndexEntries.Where(sie => searchQueryElements.Contains(sie.Word)).Sum(sie => sie.Ranking))
-                .Skip(parameter.Page * parameter.PageSize)
-                .Take(parameter.PageSize)
-                .Select(wp => new SearchResult
-                {
-                    Url = wp.Url,
-                    Title = wp.Title,
-                    Description = wp.Description,
-                    Ranking = wp.SearchIndexEntries.Where(sie => searchQueryElements.Contains(sie.Word)).Sum(sie => sie.Ranking)
-                });
-
-            var resultArray = result.ToArray();
+            var webPageIds = searchIndexEntries.SelectMany(sie => sie.WebPages.Select(sir => sir.WebPageId)).Distinct();
+            var totalRecords = webPageIds.Count();
+            var webPageRankings =
+                searchIndexEntries.SelectMany(sie => sie.WebPages.Select(sir => new { sir.WebPageId, sir.Ranking }));
+            var grouped = webPageRankings.GroupBy(
+                a => a.WebPageId,
+                (id, aa) => new { WebPageId = id, TotalRanking = aa.Sum(a => a.Ranking) });
+            var ordered = grouped.OrderByDescending(a => a.TotalRanking);
+            var paged = ordered.Skip(parameter.Page * parameter.PageSize).Take(parameter.PageSize);
+            var withWebPagesLoaded =
+                paged.Select(a => new { WebPage = _mongoDbDao.GetWebPageById(a.WebPageId), a.TotalRanking });
+            var searchResults =
+                withWebPagesLoaded.Select(
+                    a =>
+                    new SearchResult
+                        {
+                            Url = a.WebPage.Url,
+                            Title = a.WebPage.Title,
+                            Description = a.WebPage.Description,
+                            Ranking = a.TotalRanking
+                        }).ToList();
 
             return new PagedSearchResult
             {
-                TotalRecords = webPages.Count(),
-                SearchResults = resultArray,
+                TotalRecords = totalRecords,
+                SearchResults = searchResults,
             };
         }
 
